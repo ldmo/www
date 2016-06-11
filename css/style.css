@@ -4,7 +4,14 @@
     /*Montserrat Subrayada*/
 }
 
+@font-face {
+  	font-family: 'OpenSans';
+    src: url('../assets/OpenSans-Regular.ttf')  format('truetype');
+    /*Open Sans*/
+}
+
 body{
+	font-family: 'OpenSans', sans-serif;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -21,6 +28,12 @@ h1{
 	width: 70%;
 }
 
+h3{
+	width: 100%;
+	border-bottom: solid 2px #fb517b;
+	color: #fb517b;
+}
+
 h4{
 	margin: 0;
 	font-family: logoFont, sans-serif;
@@ -35,7 +48,7 @@ header{
 	text-align: center;
 	background: #2d3c86;
 	border-bottom: solid 1px #000;
-	box-shadow: 0px 3px 5px 0px rgba(100,100,100,0.8);
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
 }
 
 content{
@@ -58,9 +71,38 @@ menu{
 	box-sizing: border-box;
 }
 
+a{
+	color: #333;
+}
+
+a.cta{
+	display: block;
+	margin: auto;
+	min-width: 50%;
+	font-size: 6vw;
+	border-radius: 5px;
+	border: solid 3px #fb517b;
+	color: #fb517b;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 60px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.8);
+}
+
 .fa{
 	color: white;
-	width: 10%;
+	margin: 1%;
+}
+.fa-dark{
+	color: black;
+}
+.inline{
+	display: inline;
+}
+.menuIcon{
+	text-decoration: none;
 }
 
 .stdBox{
@@ -70,4 +112,8 @@ menu{
 	margin-top: 20px;
 	padding: 10px;
 	box-sizing: border-box;
+}
+
+.noUnderline{
+	text-decoration: none;
 }

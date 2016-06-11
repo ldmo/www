@@ -63,7 +63,8 @@ var ctrl = {
         console.log('ctrl init');
         $("#menu").mmenu({
             "navbar": {
-                "title": "<h4>OnTheDoor</h4>"
+                "title": '<h4>OnTheDoor</h4>',
+                'add': false
             }
         }, {
          offCanvas: {
