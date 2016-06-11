@@ -31,13 +31,13 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <title>Bye World</title>
+        <title>OnTheDoor</title>
         <link rel="stylesheet" type="text/css" href="css/fa/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <header>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" data-target="menu"></i>
             <h1>OnTheDoor</h1>
             <i class="fa fa-search"></i>
         </header>
@@ -47,10 +47,38 @@
         <input type="hidden" name="action" id="action" value="signin"></input>
         <button id='login-submit' name="submit" type="submit">Log in</button>
     </form>-->
+        <menu>
+I am menu
+        </menu>
+        <content>
+            <h3>Featured</h3>
+            <div class="lrgBox">
+                <span>Event Name</span>
+                <span>Venue Name</span>
+                <span>Date</span>
+                <i class="fa fa-music" aria-hidden="true"></i>
+                <i class="fa fa-cart-plus fa-2x"></i>
+            </div>
+            <h3>Near You</h3>
+            <div class="stdBox">
+                <span>Event Name</span>
+                <span>Venue Name</span>
+                <span>Date</span>
+                <i class="fa fa-music" aria-hidden="true"></i>
+                <i class="fa fa-cart-plus fa-2x"></i>
+            </div>
+             <div class="stdBox">
+                <span>Event Name</span>
+                <span>Venue Name</span>
+                <span>Date</span>
+                <i class="fa fa-film" aria-hidden="true"></i>
+                <i class="fa fa-cart-plus fa-2x"></i>
+            </div>
+        </content>
 
 
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

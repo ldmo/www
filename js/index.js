@@ -55,4 +55,18 @@ $(document).on('cordovaReady', function(e){
             }
         });
     });
+    //menu slider
+
+
+
+
+
 });
+
+    console.log('here');
+    $('.fa').on('click', function(e){
+        e.preventDefault();
+        var target = $(this).attr('data-target');
+        console.log(target);
+        $('menu').animate({'margin-left':'0%'}, 100)
+    });
