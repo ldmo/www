@@ -43,6 +43,7 @@ app.initialize();
 var loginURL = "https://mvs.online/loginTest/index.php";
 
 $(document).on('cordovaReady', function(e){
+    ctrl.init();
     $("#login-submit").click(function(e){
         e.preventDefault();
         $.post(loginURL, $('#loginForm').serialize(), function(data){
@@ -55,18 +56,45 @@ $(document).on('cordovaReady', function(e){
             }
         });
     });
-    //menu slider
-
-
-
-
-
 });
 
-    console.log('here');
-    $('.fa').on('click', function(e){
-        e.preventDefault();
-        var target = $(this).attr('data-target');
-        console.log(target);
-        $('menu').animate({'margin-left':'0%'}, 100)
+var ctrl = {
+    init: function(){
+        console.log('ctrl init');
+        $("#menu").mmenu({
+            "navbar": {
+                "title": "<h4>OnTheDoor</h4>"
+            }
+        }, {
+         offCanvas: {
+            pageSelector: "#wrapper"
+         }
+      });
+        view.init();
+    }
+}
+var view = {
+    init: function(){
+        this.listen();
+    },
+    listen: function(){
+        $('.specialLink').on('click', function(event) {
+            event.preventDefault();
+            console.log('special link clicked');        
     });
+    }
+}
+
+    
+
+
+
+ctrl.init();
+
+
+
+
+
+
+
+
