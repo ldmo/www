@@ -58,17 +58,13 @@ content{
 	width: 100%;
 }
 
-menu{
-	display: block;
-	float: left;
-	width: 60%;
-	margin-left: -80%;
-	background: #e0e0e0;
-	padding: 0;
-	padding-left: 15%;
-	height: 400px;
-	box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.4);
-	box-sizing: border-box;
+.mm-listview{
+	font-size: 1.1rem;
+}
+
+.mm-listview>li{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 a{
@@ -96,7 +92,7 @@ a.cta{
 	margin: 1%;
 }
 .fa-dark{
-	color: black;
+	color: #202a60;
 }
 .inline{
 	display: inline;
