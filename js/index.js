@@ -72,6 +72,13 @@ var ctrl = {
          }
       });
         view.init();
+    },
+    giveMeAPage: function(target){
+        console.log('looking for:'+target);
+        $('content').load('templates/'+target+'.html #content', function(){
+            console.log('looking good');
+        });
+        
     }
 }
 var view = {
@@ -79,10 +86,11 @@ var view = {
         this.listen();
     },
     listen: function(){
-        $('.specialLink').on('click', function(event) {
-            event.preventDefault();
-            console.log('special link clicked');        
-    });
+        $('.ajaxHandle').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr('data-target');
+            ctrl.giveMeAPage(target);
+    })
     }
 }
 
