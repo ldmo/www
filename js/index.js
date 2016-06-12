@@ -74,11 +74,17 @@ var ctrl = {
         view.init();
     },
     giveMeAPage: function(target){
-        console.log('looking for:'+target);
-        $('content').load('templates/'+target+'.html #content', function(){
-            console.log('looking good');
-        });
-        
+        var link = '';
+        if(target=='index'){
+            link += 'index.html';
+        }
+        else{
+            link += 'templates/'+target+'.html';
+        }
+        console.log(link);
+        $('content').load(link, function(){
+            console.log('page '+link+' should have loaded');
+        });  
     }
 }
 var view = {
@@ -88,7 +94,9 @@ var view = {
     listen: function(){
         $('.ajaxHandle').on('click', function(e) {
             e.preventDefault();
+            console.log('alright still');
             var target = $(this).attr('data-target');
+            location.hash = target;
             ctrl.giveMeAPage(target);
     })
     }
